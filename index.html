@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<style>
+    .header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-lg-4, .page-section, .container {
+    background-color: #1abc9c;
+}
+
+.bg-primary {
+    background-color: #1abc9c;
+}
+</style>
+
+<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <h1>Bumi Health</h1>
+    <p>making healthcare more accessible</p>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="column">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Great Experience</h2>
+        <br>
+        <p class="lead">Having a complicated medical procedure in another country might sound scary, but our team will ensure you have the smoothest possible experience. We take care of all aspects of the trip, so you don't have to worry.</p>
+    </div>
+    <div class="column">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Quality Healthcare</h2>
+        <br>
+        <p class="lead">We partner with internationally-accredited hospitals all over the globe to provide our patients with quality care.</p>
+    </div>
+    <div class="column">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Low Cost</h2>
+        <br>
+        <p class="lead">We guarantee the price you pay for our procedures will be a fraction of what it costs here in America. Yes, even with a great insurance.</p>
+    </div>
+  </div>
+
+<br>
+
+<!-- About Section-->
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4"><p class="lead">BUMI Health is a service that connects patients with global world-class physicians to deliver top-notch medical care at a fraction of the cost.</p></div>
+            <div class="col-lg-4"><p class="lead">We empower you to find the perfect healthcare provider to suit your unique needs.</p></div>
+            <div class="col-lg-4"><p class="lead">Explore our vast network of doctors to find the right fit today!</p></div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+{% endblock %}

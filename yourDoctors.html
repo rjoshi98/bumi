@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}Your Doctors{% endblock %}
+{% block content %}
+
+<head>
+  <meta name="viewport", initial-scale=1">
+  <style>
+  * {
+      box-sizing: border-box;
+    }
+  
+  /* Create three unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  .left {
+    width: 33%;
+  }
+  
+  .right {
+    width: 67%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  </style>
+  
+</head>
+
+<h1>Your Saved Doctors</h1>
+
+<br>
+
+{% for item in data %}
+
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2>{{ item[0][0] }}</h2>
+    <p>{{ item[0][1] }}</p>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+    <br>
+    <p>{{ item[0][2] }}</p>
+    <p>{{ item[0][3] }}</p>
+    <p>{{ item[0][4] }}</p>
+    <p>{{ item[0][5] }}</p>
+    <form action="#" method="post">
+      <!-- onsubmit="setTimeout(function(){window.location.reload();},10);" -->
+      <input type="checkbox" value="{{ item[0][0] }}" name="doctors">
+      <button type="submit">Remove</button>
+    </form>
+  </div>
+</div>
+
+<br>
+<br>
+
+{% endfor %}
+
+{% endblock %}
